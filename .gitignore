@@ -18,7 +18,7 @@ venv/
 # Data and artifacts
 *.log
 plots/
-models/
+# models/ - Allow model files for Streamlit Cloud deployment
 # Uncomment if you prefer not to version datasets
 # data/
 
