@@ -16,7 +16,15 @@ st.set_page_config(
     layout="wide"
 )
 
-@st.cache(allow_output_mutation=True)
+# Use the appropriate caching decorator based on Streamlit version
+try:
+    # For Streamlit >= 1.18.0
+    cache_decorator = st.cache_resource
+except AttributeError:
+    # For older Streamlit versions
+    cache_decorator = st.cache
+
+@cache_decorator
 def load_model():
     """Load the trained model and related files."""
     try:
