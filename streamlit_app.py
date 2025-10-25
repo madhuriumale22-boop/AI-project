@@ -16,7 +16,7 @@ st.set_page_config(
     layout="wide"
 )
 
-@st.cache_resource
+@st.cache(allow_output_mutation=True)
 def load_model():
     """Load the trained model and related files."""
     try:
@@ -62,7 +62,7 @@ def main():
                 st.write(f"• {symptom.replace('_', ' ').title()}")
             
             # Predict button
-            if st.button("🔍 Predict Disease", type="primary"):
+            if st.button("🔍 Predict Disease"):
                 # Create input vector
                 input_vector = np.zeros(len(symptoms))
                 for i, symptom in enumerate(symptoms):
