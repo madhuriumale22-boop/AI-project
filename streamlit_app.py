@@ -20,9 +20,13 @@ st.set_page_config(
 def load_model():
     """Load the trained model and related files."""
     try:
-        model = joblib.load('models/disease_model.pkl')
-        label_encoder = joblib.load('models/label_encoder.pkl')
-        symptoms = joblib.load('models/symptoms.pkl')
+        # Get the directory where this script is located
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        models_dir = os.path.join(script_dir, 'models')
+        
+        model = joblib.load(os.path.join(models_dir, 'disease_model.pkl'))
+        label_encoder = joblib.load(os.path.join(models_dir, 'label_encoder.pkl'))
+        symptoms = joblib.load(os.path.join(models_dir, 'symptoms.pkl'))
         return model, label_encoder, symptoms
     except Exception as e:
         st.error(f"Error loading model: {e}")
