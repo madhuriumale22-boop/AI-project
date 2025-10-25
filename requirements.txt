@@ -7,4 +7,3 @@ streamlit>=1.12.0
 numpy>=1.21.0
 plotly>=5.0.0
 altair==4.2.2
-#
