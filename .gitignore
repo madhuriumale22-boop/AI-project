@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual envs
+venv/
+.env/
+.env.*
+
+# IDE/editor
+.vscode/
+.idea/
+*.swp
+
+# Data and artifacts
+*.log
+plots/
+models/
+# Uncomment if you prefer not to version datasets
+# data/
+
+# Streamlit
+.streamlit/
+
+# OS
+.DS_Store
+Thumbs.db
