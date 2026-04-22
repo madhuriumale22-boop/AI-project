@@ -1,0 +1,7 @@
+_pycache_/
+.venv/
+venv/
+model.pkl
+label_encoder.pkl
+.DS_Store
+*.csv
